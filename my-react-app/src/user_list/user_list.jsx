@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { API } from '../const/const';
+import { API, STORAGE } from '../const/const';
 import { getData } from '../get_data/get_data';
 import { updatePosts, updateUserId, updateAlbums } from '../store/slice/data';
 import { changeModalStatus } from '../store/slice/modal';
@@ -36,6 +36,14 @@ function UserList() {
                                 const posts = await getData(API.POSTS);
                                 dispatch(updatePosts(posts));
                                 dispatch(updateUserId(user.id));
+                                localStorage.setItem(
+                                    STORAGE.POSTS,
+                                    JSON.stringify(posts)
+                                );
+                                localStorage.setItem(
+                                    STORAGE.USER_ID,
+                                    JSON.stringify(user.id)
+                                );
                             }}
                         >
                             Posts

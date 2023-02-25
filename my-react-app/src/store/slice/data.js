@@ -1,9 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { STORAGE } from '../../const/const';
+
+let posts;
+let userId;
+try {
+    posts = JSON.parse(localStorage.getItem(STORAGE.POSTS));
+    userId = JSON.parse(localStorage.getItem(STORAGE.USER_ID));
+} catch (error) {
+    console.log('error: ', error);
+}
 
 const initialState = {
     users: [],
-    posts: [],
-    userId: null,
+    posts: posts ?? [],
+    userId: userId ?? null,
     albums: [],
 };
 
@@ -30,4 +40,10 @@ const { actions, reducer } = data;
 const { updateUsers, updatePosts, updateUserId, updateAlbums } = actions;
 const dataPlaceholder = reducer;
 
-export { dataPlaceholder, updateUsers, updatePosts, updateUserId, updateAlbums };
+export {
+    dataPlaceholder,
+    updateUsers,
+    updatePosts,
+    updateUserId,
+    updateAlbums,
+};

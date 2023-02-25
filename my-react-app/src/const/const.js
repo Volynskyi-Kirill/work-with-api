@@ -4,4 +4,9 @@ const API = {
     ALBUMS: 'https://jsonplaceholder.typicode.com/albums',
 };
 
-export { API };
+const STORAGE = {
+    POSTS: 'posts',
+    USER_ID: 'userId',
+};
+
+export { API, STORAGE };

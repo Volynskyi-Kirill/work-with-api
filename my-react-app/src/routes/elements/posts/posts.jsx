@@ -8,6 +8,8 @@ function Posts() {
     const userId = useSelector((store) => store.dataPlaceholder.userId);
 
     posts = posts.filter((post) => post.userId === userId);
+    console.log('posts: ', posts);
+    
 
     return (
         <>
