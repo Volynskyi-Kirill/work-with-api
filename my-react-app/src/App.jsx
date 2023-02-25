@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { API } from './const/const';
 import { getData } from './get_data/get_data';
 import { updateUsers } from './store/slice/data';
