@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.user-card {
+    width: 30rem;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.user-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.user-card p {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.link-posts,
+.button-albums {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    background-color: #4caf50;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.link-posts:hover {
+    cursor: pointer;
+    background-color: #3e8e41;
+}
+
+.button-albums:hover {
+    cursor: pointer;
+    background-color: #0f5eb3;
+}
+
+.link-posts:focus,
+.button-albums:focus {
+    outline: none;
+}
+
+.link-posts {
+    margin-right: 1rem;
+}
+
+.button-albums {
+    background-color: #2196f3;
+}
+
+@media (max-width: 768px) {
+    .user-card {
+        width: 100%;
+    }
+}

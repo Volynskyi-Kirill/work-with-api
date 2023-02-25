@@ -1,0 +1,14 @@
+.header {
+    background-color: #eee;
+    padding: 1rem;
+}
+
+.link-users {
+    font-size: 1.5rem;
+    color: rgb(140, 105, 246);
+    text-decoration: none;
+}
+
+.link-users:hover {
+    color: rgb(85, 154, 203);
+}

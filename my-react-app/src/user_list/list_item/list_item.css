@@ -1,0 +1,13 @@
+.list {
+    /* list-style: none; */
+    margin: 0.5rem;
+    padding: 0;
+}
+
+.list-item {
+    margin-bottom: 1rem;
+}
+
+.list-item__title {
+    font-size: 1.1rem;
+}
